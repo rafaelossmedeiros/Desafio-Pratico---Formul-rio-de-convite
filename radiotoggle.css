@@ -1,0 +1,201 @@
+
+#labelradio {
+    margin-top: 24px;
+    display: block;
+    color: #C8CDD0;
+    font: var(--text-body-sm);
+}
+
+
+
+
+.color {
+    color: #869198;
+    font: var(--text-body-sm);
+}
+
+#bloco1 {
+    display: flex;
+    
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 8px;
+
+    label {
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        z-index: 2;
+        
+    }
+
+    #presencial {
+        
+        
+        z-index: 1;
+        display: flex;
+    }
+
+    #a {
+        display: flex;
+        z-index: 1;
+    }
+
+    
+
+    
+
+}
+
+#bloco2 {
+    display: flex;
+    position: relative;
+    
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 8px;
+
+    label {
+        width: 100%;
+        height: 100%;
+        align-content: center;
+        
+    }
+
+    #online {
+
+        font: var(--text-body-sm);
+        z-index: 1;
+        
+        
+    }
+
+    #b {
+        
+        display: flex;
+        z-index: 1;
+        
+    }
+
+}
+
+
+
+.radio-wrapper {
+
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 272px;
+    max-width: 272px;
+    height: 48px;
+    border-radius: 8px;
+    align-items: center;
+    border: solid 0.5px #363B40;
+    position: relative;     
+    background-color: #1C1F21;         
+    padding-inline: 4px;
+    font: bold;
+
+    
+
+    &:has(input[id="option1"]:checked) {
+        
+        #primeirosvg {
+            stroke: #59B2FF;
+            transform: scale(1.02);
+            transition: 0.3s;
+            
+            
+        }
+
+        #presencial {
+            color: #F9F9F9;
+            transform: scale(1.02);
+            transition: 0.3s;
+            
+            
+        }
+    }
+
+    &:not(:has(input[id="option1"]:checked)) {
+
+
+        #segundosvg {
+            stroke: #59B2FF;
+            transform: scale(1.02);
+            transition: 0.3s;
+            
+            
+        }
+
+        #online {
+            color: white;
+            transform: scale(1.02);
+            transition: 0.3s;
+        }      
+
+        
+    }
+}
+
+
+
+/* Esconde o input radio original */
+input[type="radio"] {
+    display: none;
+}
+
+
+input:checked  + #teste + .voa {
+    transform: translatex(100%);
+}
+
+
+#primeirosvg {
+    width: 16px;
+    height: 16px;
+    
+    
+}
+
+#label-otpion1, #teste {
+    
+    
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+     
+    
+    position: absolute;
+}
+
+
+
+.voa {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    background-color: #363b40be;
+    transition: transform 0.3s ease;
+    z-index: 0;
+
+    right: 100%;
+}
+
+
+
+
+
+
+
