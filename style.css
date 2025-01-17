@@ -17,9 +17,10 @@
     --text-heading-md: 600 28px var(--font-family-baloo2);
     --text-heading-sm: 600 18px var(--font-family-baloo2);
 
-    --text-body-md: 100 16px var(--font-family-open);
+    --text-body-md: 600 16px var(--font-family-open);
     --text-body-sm: 400 14px var(--font-family-open);
     --text-body-xs: 400 12px var(--font-family-open);
+    --text-body-sm2: 600 14px var(--font-family-open);
 
 
 }
@@ -563,16 +564,244 @@ fieldset {
 
 }
 
+#infocontatos {
+
+    span {
+        font: var(--text-heading-sm);
+        color: #F9F9F9 ;
+        
+
+    }
+
+    .evento-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+
+    #info {
+        margin-top: 24px;
+    }
+
+    #name {
+
+
+
+        #campoobg {
+            
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+
+            p {
+                
+                margin-left: 9px;
+                font: var(--text-body-xs);
+                color: #FF5959;
+
+            }
+        }
+
+        label {
+            font: var(--text-body-sm);
+            color: #C8CDD0;
+            margin-top: 24px;
+        }
+
+        input {
+            margin-top: 12px;
+            appearance: none;
+            width: 100%;
+            height: 48px;
+            padding: 16px;
+            border-radius: 8px;
+            background-color: #1C1F21;
+            border: solid 0.5px #FF5959;
+    
+            font: var(--text-body-md);
+            color: #869198;
+    
+
+        }
+
+
+
+    }
+
+    #mail-tel {
+
+        display: grid;
+
+        
+        grid-template-columns:  1fr 1fr;
+        gap: 16px;
+        margin-top: 16px;
+
+
+        label {
+            font: var(--text-body-sm);
+            color: #C8CDD0;
+            margin-top: 24px;
+        }
+    
+        input {
+            margin-top: 12px;
+            appearance: none;
+            width: 100%;
+            height: 48px;
+            padding: 16px;
+            border-radius: 8px;
+            background-color: #1C1F21;
+            border: solid 0.5px #363B40;
+    
+            font: var(--text-body-md);
+            color: #869198;
+    
+    
+        }
+    
+        input:focus, input:focus-within {
+            color: white;
+            border-color: #59B2FF;
+            outline: none;
+        }  
+    }
+
+    
+}
+
+
+hr {
+    margin-top: 48px;
+                 
+    height: 1px;              
+    border: none;             
+    background-color: #869198 ; 
+
+}
+
+
+footer {
+
+    #checkbox {
+
+        display: flex;
+        flex-direction: column;
+        gap: 17.5px;
+        margin-top: 44.5px;
+
+        label {
+            color: #C8CDD0;
+            font: var(--text-body-sm);
+            
+        }
+
+        strong {
+            color: #59B2FF;
+            font: var(--text-body-sm2);
+        }
+
+        u {
+            color: #59b2ff39;
+        }
+
+        /* Esconder o checkbox padrão */
+        input[type="checkbox"] {
+        display: none; /* Esconde o checkbox padrão */
+        
+      }
+  
+      /* Estilizar o label como a caixa de seleção */
+      input[type="checkbox"] + label {
+        position: relative;
+        padding-left: 35px; /* Espaço para o ícone da caixa de seleção */
+        cursor: pointer;
+        
+        
+        
+        user-select: none; /* Impede a seleção de texto ao clicar */
+      }
+  
+      /* Criar o ícone da caixa de seleção */
+      input[type="checkbox"] + label::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #869198;
+        border-radius: 4px;  
+        background-color: #1C1F21;
+        transition: background-image 1s, border-color 1s;
+         
+        
+      }
+  
+      /* Estilo quando o checkbox está marcado */
+      input[type="checkbox"]:checked + label::before {
+        
+        border: solid 1px #59B2FF; /* Cor da borda quando marcado */
+        content: "";  /* O pseudo-elemento precisa de algum conteúdo, mesmo que vazio */
+        position: absolute;  /* Para posicionar a imagem no local desejado */
+        top: 0px;  /* Posiciona no topo do elemento */
+        left: 0px;  /* Posiciona à esquerda do elemento */
+        width: 20px;
+        height: 20px;
+        background: url('assets/icons/check.svg') no-repeat center center;  /* Imagem de fundo */
+        background-size: cover;  /* Faz a imagem cobrir toda a área */
+        z-index: 1;  /* Coloca o pseudo-elemento atrás do conteúdo real */
+        transition: background-image 1s, border-color 1s;
+      }
+  
+      
+    }
+}
 
 
 
 
+button {
+    background-color: #1D6FB6;
+    width: 177px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 20px;
+    padding-block: 4px;
+    gap: 12px;
+    border-radius: 8px;
+    border: none;
+    color: #F9F9F9;
+    
 
 
+    &:hover {
+        background-color: #3487CF;
+        transition: 0.5s ease-in-out;
+    }
+
+    transition: 0.3s ease-in-out;
+    
+    
+    font: var(--text-body-md);
+    
+
+    i {
+        width: 20px;
+        height: 20px;
+    }
+
+    cursor: pointer;
+}
 
 
-
-
+#divbtn {
+    margin-top: 48px;
+    justify-self: end;
+}
 
 
 
